@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Links Stats</title>
+</head>
+<body>
+    <h1>All Links Stats</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Link</th>
+                <th>Visits</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${stats.map(stat => `
+                <tr>
+                    <td>${stat.username}</td>
+                    <td><a href="${stat.url}" target="_blank">${stat.url}</a></td>
+                    <td>${stat.visits}</td>
+                </tr>
+            `).join('')}
+        </tbody>
+    </table>
+</body>
+</html>

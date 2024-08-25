@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer data-domain="7535-2409-4081-2e1b-811d-7c22-6e24-f5d9-e905.ngrok-free.app" src="https://plausible.io/js/script.outbound-links.js"></script>
+    <title>All Links Stats</title>
+</head>
+<body>
+    <h1>All Links Stats</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Link</th>
+                <th>Visits</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% stats.forEach(stat => { %>
+                <tr>
+                    <td><%= stat.username %></td>
+                    <td><a href="<%= stat.url %>" target="_blank"><%= stat.url %></a></td>
+                    <td><%= stat.visits %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
