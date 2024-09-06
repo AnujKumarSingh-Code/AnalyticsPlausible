@@ -26,7 +26,7 @@ const fetchLinkStatsFromPlausible = async (linkUrl) => {
     try {
         const response = await axios.get('https://plausible.io/api/v1/stats/aggregate', {
             params: {
-                site_id: '7535-2409-4081-2e1b-811d-7c22-6e24-f5d9-e905.ngrok-free.app',
+                site_id: 'analyticsplausible-1.onrender.com',
                 metrics: 'visitors',
                 date_range: '7d',
                 dimensions: ['time:day', 'event:props:url'],
@@ -34,7 +34,7 @@ const fetchLinkStatsFromPlausible = async (linkUrl) => {
                 order_by: [['time:day', 'asc']],
             },
             headers: {
-                'Authorization': `Bearer z_0FJcWNYgW-F3QF-0fkatXdOdnC4H7X4RQ9dkPunSGlORVRCoq1EI6RKAAioq8D`,
+                'Authorization': `Bearer xeu43Uv3Gam5Jnn81UElD5J3AtsKH9x6EkUiCoSxcji1N_WLfQ8bOpk_AKjSZwei`,
             }
         });
 
